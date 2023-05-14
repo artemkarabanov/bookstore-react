@@ -2,7 +2,6 @@ import { createBrowserRouter, createRoutesFromElements, Route, Routes } from "re
 import { Main } from "templates";
 import {
   Account,
-  BookDetails,
   Cart,
   Favorites,
   Home,
@@ -18,7 +17,6 @@ export const AppRouter = createBrowserRouter(
     <Route path={ROUTE.HOME} element={<Main />}>
       <Route index element={<Home />} />
       <Route path={ROUTE.SEARCH} element={<Search />} />
-      <Route path={ROUTE.BOOK_DETAILS} element={<BookDetails />} />
       <Route path={ROUTE.ACCOUNT} element={<Account />} />
       <Route path={ROUTE.CART} element={<Cart />} />
       <Route path={ROUTE.FAVORITES} element={<Favorites />} />
