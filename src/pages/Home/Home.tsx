@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { BooksList, Loader, Title } from "components";
 import { fetchNewBooks, getNewBooks, useAppDispatch, useAppSelector } from "store";
 import { StyledHome } from "./style";
+import { Subscribe } from "components/Subscribe";
 
 export const Home = () => {
   const { error, isLoading, books } = useAppSelector(getNewBooks);
@@ -18,6 +19,7 @@ export const Home = () => {
       <StyledHome>
         <Title text="New Releases Books" />
         <BooksList isLoading={isLoading} error={error} books={books} />
+        <Subscribe />
       </StyledHome>
     </>
   );
