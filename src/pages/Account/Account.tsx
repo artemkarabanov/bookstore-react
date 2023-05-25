@@ -1,5 +1,11 @@
-import React from "react";
+import { Account, ArrowBack } from "components";
 
-export const Account = () => {
-  return <div>Account</div>;
+export const AccountPage = () => {
+  return (
+    <>
+      <ArrowBack />
+      <Account />
+    </>
+  );
 };
+export { Account };

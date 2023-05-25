@@ -5,6 +5,8 @@ import { ReactComponent as SearchLogoIcon } from "./icons/search.svg";
 import { ReactComponent as UserHeaderIcon } from "./icons/userHeader.svg";
 import { ReactComponent as ArrowLeft } from "./icons/arrowLeft.svg";
 import { ReactComponent as CartHeaderIcon } from "./icons/cartHeader.svg";
+import EmptyCartIcon from "./images/empty-cart.png";
+import FavoritesImage from "./images/favor.png";
 export {
   BookstoreIcon,
   ClosedIcon,
@@ -13,4 +15,6 @@ export {
   CartHeaderIcon,
   UserHeaderIcon,
   ArrowLeft,
+  EmptyCartIcon,
+  FavoritesImage,
 };

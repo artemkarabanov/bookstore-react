@@ -11,6 +11,7 @@ import {
   Search,
 } from "../pages";
 import { ROUTE } from "./routes";
+import { CartPage } from "pages/Cart/Cart";
 
 export const AppRouter = createBrowserRouter(
   createRoutesFromElements(
@@ -18,7 +19,7 @@ export const AppRouter = createBrowserRouter(
       <Route index element={<Home />} />
       <Route path={ROUTE.SEARCH} element={<Search />} />
       <Route path={ROUTE.ACCOUNT} element={<Account />} />
-      <Route path={ROUTE.CART} element={<Cart />} />
+      <Route path={ROUTE.CART} element={<CartPage />} />
       <Route path={ROUTE.FAVORITES} element={<Favorites />} />
       <Route path={ROUTE.REGISTRATION} element={<Registration />} />
       <Route path={ROUTE.RESET_PASSWORD} element={<ResetPassword />} />
