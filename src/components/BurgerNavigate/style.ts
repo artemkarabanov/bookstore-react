@@ -23,7 +23,7 @@ export const StyledList = styled.ul<IProps>`
     display: flex;
     flex-flow: column nowrap;
     height: 100vh;
-    width: 375px;
+    width: 100%;
     padding-top: 23px;
     text-align: center;
     color: ${Color.Primary};
@@ -71,7 +71,7 @@ export const Title = styled.h3`
   }
 `;
 export const Button = styled(StyledButton)`
-  width: 60%;
+  width: 50%;
   margin: 0 auto;
   margin-top: 40px;
   padding: 10px 20px;

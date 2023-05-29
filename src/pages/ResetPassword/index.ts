@@ -1,2 +1,2 @@
-import { ResetPassword } from "./ResetPassword";
-export { ResetPassword };
+import { ResetPasswordPage } from "./ResetPassword";
+export { ResetPasswordPage };

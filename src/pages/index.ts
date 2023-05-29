@@ -1,10 +1,10 @@
-import { Account } from "./Account";
-import { Cart } from "./Cart";
-import { Favorites } from "./Favorite";
-import { Home } from "./Home";
-import { NotFound } from "./NotFound";
-import { Registration } from "./Registration";
-import { ResetPassword } from "./ResetPassword";
-import { Search } from "./Search";
-
-export { Account, Cart, Favorites, Home, NotFound, Registration, ResetPassword, Search };
+export { Account } from "./Account";
+export { BookDetailsPage } from "./BookDetailsPage";
+export { Cart } from "./Cart";
+export { Favorites } from "./Favorite";
+export { Home } from "./Home";
+export { NotFound } from "./NotFound";
+export { Registration } from "./Registration";
+export { ResetPasswordPage } from "./ResetPassword";
+export { SearchPage } from "./Search";
+export { SigInPage } from "./SigInPage";

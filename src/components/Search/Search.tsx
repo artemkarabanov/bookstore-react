@@ -29,7 +29,7 @@ export const Search = () => {
         setSearchValue({
           searchValue: debouncedValue,
           page: 1,
-        })
+        }),
       );
     } else {
       dispatch(removeSearchValue());
@@ -38,12 +38,7 @@ export const Search = () => {
 
   return (
     <StyledSearch onSubmit={handleSearch}>
-      <Input
-        type="text"
-        placeholder="Search..."
-        name="search"
-        {...searchValue}
-      />
+      <Input type="text" placeholder="Search..." name="search" {...searchValue} />
       <Button type="submit">
         <SearchLogoIcon />
       </Button>

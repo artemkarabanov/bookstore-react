@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { AxiosError } from "axios";
-import { bookStoreAPI } from "services/bookStoreApi/bookStoreApi";
+import { getSearch } from "services/bookStoreApi";
 import { SearchedBooksResponse, SearchParams } from "types";
 import { isPendingAction, isRejectedAction } from "../utils";
 
@@ -30,20 +30,14 @@ export const fetchSearchedBooks = createAsyncThunk<
   SearchedBooksResponse,
   SearchParams,
   { rejectValue: string }
->(
-  "search/fetchSearchedBooks",
-  async (searchParams: SearchParams, { rejectWithValue }) => {
-    try {
-      return await bookStoreAPI.getSearch(
-        searchParams.searchValue,
-        searchParams.page
-      );
-    } catch (error) {
-      const axiosError = error as AxiosError;
-      return rejectWithValue(axiosError.message);
-    }
+>("search/fetchSearchedBooks", async (searchParams: SearchParams, { rejectWithValue }) => {
+  try {
+    return await getSearch(searchParams.searchValue, searchParams.page);
+  } catch (error) {
+    const axiosError = error as AxiosError;
+    return rejectWithValue(axiosError.message);
   }
-);
+});
 
 const searchSlice = createSlice({
   name: "search",
@@ -86,9 +80,5 @@ const searchSlice = createSlice({
 
 export default searchSlice.reducer;
 
-export const {
-  removeSearchValue,
-  setSearchValue,
-  incrementPage,
-  decrementPage,
-} = searchSlice.actions;
+export const { removeSearchValue, setSearchValue, incrementPage, decrementPage } =
+  searchSlice.actions;

@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { bookStoreAPI } from "services/bookStoreApi";
+import { getDetails } from "services/bookStoreApi";
 import { IBookDetails, BookDetails } from "types";
 import { isPendingAction, isRejectedAction } from "../utils";
 
@@ -31,7 +31,7 @@ export const fetchDetailsBook = createAsyncThunk<IBookDetails, string, { rejectV
   "bookDetails/fetchDetailsBook",
   async (isbn: string, { rejectWithValue }) => {
     try {
-      const response = await bookStoreAPI.getDetails(isbn);
+      const response = await getDetails(isbn);
       return response;
     } catch {
       return rejectWithValue("error");

@@ -1,2 +1,4 @@
 import { trimSearchValue } from "./trimSearchValue";
-export { trimSearchValue };
+import { getPagesCount } from "./getPagesCount";
+import { getFirebaseMessageError } from "./firebaseError";
+export { trimSearchValue, getPagesCount, getFirebaseMessageError };

@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Color, Space, Fonts } from "ui";
 
 export const StyledBookItem = styled.li`
-  width: 300px;
+  width: 325px;
   margin: 0 auto;
   margin-bottom: ${Space.Large};
   list-style-type: none;
@@ -13,7 +13,7 @@ export const ItemBackground = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 300px;
+  height: 325px;
   margin-bottom: ${Space.Small};
   background-color: ${Color.Purple};
   border-radius: 5px;
@@ -24,7 +24,7 @@ export const Image = styled.img`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 215px;
+  width: 250px;
   object-fit: contain;
   background: transparent;
 `;

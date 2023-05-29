@@ -8,7 +8,7 @@ import { StyledBurger } from "./style";
 import { getCart, getFavorites, useAppSelector } from "store";
 import { Search } from "../Search";
 import { CartLogo, Count, HeartLogo, Logo, Navbar, StyledBurgerNavbar, UserLogo } from "./style";
-
+import { TogglerTheme } from "../TogglerTheme";
 export const Burger = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { width = 0 } = useWindowSize();
@@ -52,6 +52,7 @@ export const BurgerMenu = () => {
       {width > 800 && (
         <>
           <Search />
+          <TogglerTheme />
           <Navbar>
             <Link to={ROUTE.FAVORITES}>
               <HeartLogo item={item}>

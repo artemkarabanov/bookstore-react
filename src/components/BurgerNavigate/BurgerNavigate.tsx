@@ -3,6 +3,7 @@ import { useAuth, useWindowSize } from "hooks";
 import { ROUTE } from "router";
 import { removeUser, useAppDispatch } from "store";
 import { Background, Button, ButtonForm, Form, Hr, StyledList, Title } from "./style";
+import { TogglerTheme } from "../TogglerTheme";
 interface IProps {
   open?: boolean;
   close?: () => void;
@@ -27,7 +28,7 @@ export const BurgerNavigate = ({ open, close }: IProps) => {
               <Hr />
               <Form>
                 <Link to={ROUTE.FAVORITES} onClick={close}>
-                  <Title>FAVORITES</Title>
+                  <Title>Favorites</Title>
                 </Link>
                 <Link to={ROUTE.ACCOUNT} onClick={close}>
                   <Title>Account</Title>
@@ -57,10 +58,11 @@ export const BurgerNavigate = ({ open, close }: IProps) => {
           <>
             <Background open={open} />
             <StyledList open={open}>
+              <TogglerTheme />
               <Hr />
               <Form>
                 <Link to={ROUTE.FAVORITES} onClick={close}>
-                  <Title>FAVORITES</Title>
+                  <Title>Favorites</Title>
                 </Link>
                 <Link to={ROUTE.SEARCH} onClick={close}>
                   <Title>Search</Title>

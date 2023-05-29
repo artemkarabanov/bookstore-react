@@ -1,2 +1,1 @@
-import { Search } from "./Search";
-export { Search };
+export { SearchPage } from "./Search";
